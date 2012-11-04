@@ -200,10 +200,6 @@ public:
 		// Here we will switch based on the packet id.
 		switch((E_PACKET_TYPE)packetid)
 		{
-		//case EPT_BUFF:
-		//	packet >> netbuff;
-			//buffkapcsolás
-		//	break;
 		case EPT_ID:
 			packet >> netId;
 			//player ID
@@ -216,22 +212,22 @@ public:
 			packet >> netRotation;
 			//player rotálás
 			break;
-		//case EPT_ORBPOS:
-		//	packet >> netOrbPos;
-			//player orb pozicinálás
-		//	break;
+
 		case EPT_STAT:
 			packet >> netStatus;
 			//player státuszolás
 			break;
+
 		case EPT_FIREPOS:
 			packet >> netFirePos;
 			//player lövés pozicionálás
 			break;
+
 		case EPT_WIN:
 			packet >> netwin;
 			//player nyerés
 			break;
+
 		case EPT_MESSAGE:
 			core::stringc message;
 			packet >> message;
@@ -304,41 +300,36 @@ public:
 		
 		switch((E_PACKET_TYPE)packetid)
 		{
-		//case EPT_BUFF:
-		//	//std::string netbuff;
-		//	packet >> netbuff;
-		//	//buffkapcsolás
-		//	break;
 		case EPT_POS:
 			//vector3df netPosition;
 			packet >> netPosition;
 			//player pozicionálás
 			break;
+
 		case EPT_ROT:
 			//vector3df netRotation;
 			packet >> netRotation;
 			//player rotálás
 			break;
-		//case EPT_ORBPOS:
-		//	//vector3df netOrbPos;
-		//	packet >> netOrbPos;
-		//	//player orb pozicinálás
-		//	break;
+
 		case EPT_STAT:
 			//std::string netStatus;
 			packet >> netStatus;
 			//player státuszolás
 			break;
+
 		case EPT_FIREPOS:
 			//vector3df netFirePos;
 			packet >> netFirePos;
 			//player lövés pozicionálás
 			break;
+
 		case EPT_WIN:
 			//std::string netwin;
 			packet >> netwin;
 			//player nyerés
 			break;
+
 		case EPT_MESSAGE:
 			core::stringc message;
 			packet >> message;
